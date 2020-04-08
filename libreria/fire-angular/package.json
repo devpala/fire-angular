@@ -1,0 +1,24 @@
+{
+  "name": "@pala/fire-angular",
+  "version": "0.0.3",
+  "peerDependencies": {
+    "@angular/common": "^9.1.0",
+    "@angular/core": "^9.1.0",
+    "tslib": "^1.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/RUPALAVECINO/fire-angular.git"
+  },
+  "description": "This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.",
+  "bugs": {
+    "url": "https://github.com/RUPALAVECINO/fire-angular/issues"
+  },
+  "homepage": "https://github.com/RUPALAVECINO/fire-angular#readme",
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
