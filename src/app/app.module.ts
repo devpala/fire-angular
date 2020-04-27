@@ -1,9 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { PalaFireAngularModule} from '@pala/fire-angular';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { PalaFireAngularModule } from '@pala/fire-angular';
+
+const my_architecture_db = { 
+  coleccion:['name-col'], 
+  documento:['name-doc'],
+  subcoleccion:['name-subcol'],
+  subdocumento:['name-subdoc'] 
+}
 
 @NgModule({
   declarations: [
@@ -11,7 +18,8 @@ import { environment } from 'src/environments/environment';
   ],
   imports: [
     BrowserModule,
-    PalaFireAngularModule.start(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase,),
+    PalaFireAngularModule.start(my_architecture_db)
   ],
   providers: [],
   bootstrap: [AppComponent]

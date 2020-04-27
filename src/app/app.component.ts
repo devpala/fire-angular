@@ -1,23 +1,24 @@
-import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore'
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AfsUserService} from '@pala/fire-angular'
+import { AfsService } from '@pala/fire-angular'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  items: Observable<any[]>;
+export class AppComponent implements OnInit {
+  users: Observable<any[]>;
 
-  constructor(private pala:AfsUserService) {
-      // this.pala.obtenerColeccion(0)
-    // this.items = afs.collection('items').valueChanges();
+  constructor(private pala:AfsService) { }
+  async ngOnInit() {
+    this.users =  await this.pala.getCollection(0,10);
+
   }
 
   getFunca() {
-    this.pala.agregarDocumento(0, { name:'funca' });
+    this.pala.addDoc(0, { name:'Pala!' });
   }
+
 
 }

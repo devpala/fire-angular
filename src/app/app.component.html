@@ -1,6 +1,6 @@
 <button (click)="getFunca()">crear</button>
 <ul>
-    <li *ngFor="let item of items | async">
-      {{ item.name }}
+    <li *ngFor="let user of users | async">
+      {{ user.name }}
     </li>
   </ul>

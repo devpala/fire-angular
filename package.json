@@ -1,8 +1,8 @@
 {
   "name": "fire-angular",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "scripts": {
-    "auto": "npm run build && cd dist/fire-angular && nano package.json && npm publish && cd ../.. && npm run guardar",
+    "auto": "nano libreria/fire-angular/package.json && npm run build && cd dist/fire-angular && npm publish && cd ../.. && npm run guardar",
     "guardar": "nano package.json && git add . && git commit -m \" auto \" && git push origin master",
     "build": "ng-packagr -p libreria/fire-angular/ng-package.json",
     "ng": "ng",
