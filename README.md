@@ -1,27 +1,24 @@
-# PalafireAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+npm install @pala/fire-angular --save
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Interface para las architecture database
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Interfaz IColecciones {
+    coleccion:string[];
+    documento:string[];
+    subcoleccion:string[];
+    subdocumento:string[];
+}
 
-## Build
+# Ejemplo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Interfaz IColecciones {
+    coleccion:string['usuarios'];
+    documento:string['ajhxbavsgva'];
+    subcoleccion:string['chats'];
+    subdocumento:string['bjhxaaabsjvq'];
+}
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ADVERTENCIA: se puede realizar hasta 2 profundidades de colecciones, recuerde que fire-angular solo facilita las funciones de @angular/fire no remplaza sino lo complementa por lo que es libre de realizar las profundidades que desee llamando a @angular/fire. fire-angular esta construido con @angular/fire por lo que debera instalarlo junto con firebase tambien.
