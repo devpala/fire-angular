@@ -1,7 +1,8 @@
 
+# **Install** #
     npm install @pala/fire-angular @angular/fire firebase --save
 
-# **inicializar** #
+# **initializing** #
     const my_architecture_db = { 
       coleccion:['name-col'], 
       documento:['name-doc'],
@@ -11,7 +12,7 @@
     AngularFireModule.initializeApp(environment.firebase,),
     PalaFireAngularModule.start(my_architecture_db)
 
-# **ejemplo inicializado** #
+# **ejemplo initializing** #
     import { NgModule } from '@angular/ core';
     import { BrowserModule } from '@angular/    platform-browser';
     import { AppComponent } from './app.    component';
@@ -42,7 +43,7 @@
 
 
 
-# **Interface para las architecture database** #
+# **Interface for architecture database** #
     Interfaz IColecciones {
         coleccion:string[];
         documento:string[];
@@ -50,7 +51,7 @@
         subdocumento:string[];
     }
 
-# **Ejemplo**
+# **Example**
 
     Interfaz IColecciones {
         coleccion:string['usuarios'];
@@ -59,9 +60,9 @@
         subdocumento:string['compra'];
     }
 
-#### **ADVERTENCIA:** 
+#### **WARNING:** 
  *se puede realizar hasta 2 profundidades de colecciones, recuerde que fire-angular solo facilita las funciones de @angular/fire no remplaza sino lo complementa por lo que es libre de realizar las profundidades que desee llamando a @angular/fire.* 
 
  *fire-angular esta construido con @angular/fire*
 
- Para mas ejemplos visite [https://paladev-paladesing.firebaseapp.com](https://paladev-paladesing.firebaseapp.com/)
+ for more examples visit [https://paladev-paladesing.firebaseapp.com](https://paladev-paladesing.firebaseapp.com/)
