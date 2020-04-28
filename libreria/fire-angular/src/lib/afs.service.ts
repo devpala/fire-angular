@@ -92,6 +92,12 @@ async getCollectionDesc(num:number,cantidad:number = 10000000000000,orden?:strin
       })
       ))
   }
+
+  async addDocSet(num:number,documento:string,data:any):Promise<any>{
+    let answer = await this.afs.doc(`${this.architecture_db[num]}/${documento}`)
+    .set(data);
+    return answer;
+  }
    
   async getSubDoc(num:number,documento:string,num2:number,num4:number) {
 
