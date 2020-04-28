@@ -93,9 +93,9 @@ async getCollectionDesc(num:number,cantidad:number = 10000000000000,orden?:strin
       ))
   }
    
-  async getSubDoc(num:number,documento:string,num2:number,subdocumento:string) {
+  async getSubDoc(num:number,documento:string,num2:number,num4:number) {
 
-    return this.subDocumento$ = this.afs.doc<any>(`${this.architecture_db.coleccion[num]}/${documento}/${this.architecture_db.subcoleccion[num2]}/${subdocumento}`)
+    return this.subDocumento$ = this.afs.doc<any>(`${this.architecture_db.coleccion[num]}/${documento}/${this.architecture_db.subcoleccion[num2]}/${this.architecture_db.subdocumento[num4]}`)
     .snapshotChanges()
     .pipe(
       map((a:any) => {
