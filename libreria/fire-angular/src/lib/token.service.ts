@@ -9,7 +9,6 @@ export class TokenService {
 
    prende(architecture_db:IColecciones):any { 
       this.sv_get_db.sendDb(architecture_db);
-      console.log('prende(): ',architecture_db);
    }
    
 }

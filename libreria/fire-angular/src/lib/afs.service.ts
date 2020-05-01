@@ -28,7 +28,6 @@ export class AfsService {
 async getCollection(num:number,cantidad:number = 10000000000000):Promise<Observable<any>> { 
   
   
-    console.log('getCollection;', this.architecture_db)
   return this.coleccion$ = this.afs.collection(this.architecture_db.coleccion[num], 
     ref => ref.limit(cantidad))
     .snapshotChanges()
