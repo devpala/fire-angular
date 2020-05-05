@@ -1,5 +1,5 @@
 
-# **Install** #
+# **Installation** #
     npm install @pala/fire-angular @angular/fire firebase --save
 
 # **initializing** #
