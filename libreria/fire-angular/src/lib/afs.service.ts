@@ -97,6 +97,12 @@ async getCollectionDesc(num:number,cantidad:number = 10000000000000,orden?:strin
     .set(data);
     return answer;
   }
+
+  async addSubDocSet(num:number,documento:string,num2:number,subdocumento:string,data:any):Promise<any>{
+    let answer = await this.afs.doc(`${this.architecture_db.coleccion[num]}/${documento}/${this.architecture_db.subcoleccion[num2]}/${subdocumento}`)
+    .set(data);
+    return answer;
+  }
    
   async getSubDoc(num:number,documento:string,num2:number,num4:number) {
 
@@ -147,6 +153,12 @@ async getCollectionDesc(num:number,cantidad:number = 10000000000000,orden?:strin
   async updateSubDoc(num:number,documento:string,num2:number,subdocumento:string,datos:any){
     await this.afs.doc<any>(`${this.architecture_db.coleccion[num]}/${documento}/${this.architecture_db.subcoleccion[num2]}/${subdocumento}`)
     .update(datos);
+  }
+
+  async deleteDoc(num:number,documento:string):Promise<string>{
+    await this.afs.doc(`${this.architecture_db.coleccion[num]}/${documento}`)
+    .delete();
+    return 'eliminado'
   }
 
 
