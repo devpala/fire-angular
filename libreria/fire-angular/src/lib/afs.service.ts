@@ -98,8 +98,8 @@ async getCollectionDesc(num:number,cantidad:number = 10000000000000,orden?:strin
     return answer;
   }
 
-  async addSubDocSet(num:number,documento:string,num2:number,subdocumento:string,data:any):Promise<any>{
-    let answer = await this.afs.doc(`${this.architecture_db.coleccion[num]}/${documento}/${this.architecture_db.subcoleccion[num2]}/${subdocumento}`)
+  async addSubDocSet(num:number,documento:string,num2:number,num3:number,data:any):Promise<any>{
+    let answer = await this.afs.doc(`${this.architecture_db.coleccion[num]}/${documento}/${this.architecture_db.subcoleccion[num2]}/${this.architecture_db.subdocumento[num3]}`)
     .set(data);
     return answer;
   }
